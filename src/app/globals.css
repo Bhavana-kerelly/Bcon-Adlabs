@@ -1,0 +1,287 @@
+@import "tailwindcss";
+
+@theme {
+  --color-beige: #f0eadf;
+  --color-beige-prim: #eae4d9;
+  --color-brown: #deaf91;
+  --color-green: #186e7a;
+  --color-hotred: #f64242;
+  --color-midnight-blue: #1d283b;
+  --color-bluelight: #a4b2cb;
+  
+  --font-saol: var(--font-saol), serif;
+  --font-helno: var(--font-helno), sans-serif;
+  --font-helno-reg: var(--font-helno-reg), sans-serif;
+}
+
+:root {
+  --beige: #f0eadf;
+  --beige-prim: #eae4d9;
+  --brown: #deaf91;
+  --green: #186e7a;
+  --hotred: #f64242;
+  --midnight-blue: #1d283b;
+  --blue-light: #a4b2cb;
+}
+
+/* Fluid typography resizing based on viewport width */
+html {
+  font-size: calc(0.625rem + 0.41666666666666663vw);
+  scroll-behavior: auto; /* Handled by Lenis */
+}
+@media screen and (max-width: 1920px) {
+  html { font-size: calc(0.625rem + 0.41666666666666674vw); }
+}
+@media screen and (max-width: 1440px) {
+  html { font-size: calc(0.625rem + 0.41666666666666663vw); }
+}
+@media screen and (max-width: 479px) {
+  html { font-size: calc(0.7494769874476988rem + 0.8368200836820083vw); }
+}
+
+body {
+  background-color: var(--beige);
+  color: var(--midnight-blue);
+  font-family: var(--font-helno-reg), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* Background utilities with noise overlay */
+.background-color-beige {
+  background-color: var(--beige);
+  background-image: url('/images/noise.png');
+  background-position: 0 0;
+  background-size: 110px;
+}
+
+.background-color-dark {
+  background-color: var(--midnight-blue);
+  background-image: url('/images/noise.png');
+  background-position: 0 0;
+  background-size: 110px;
+}
+
+/* Core transition panel overlay */
+.transition-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--midnight-blue);
+  z-index: 9999;
+  transform: translateY(-100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Rotating continuous keyframe animation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* Typography styles matching production definitions */
+.heading-style-italiclg {
+  font-family: var(--font-saol), serif;
+  font-size: 6rem;
+  font-style: italic;
+  font-weight: 100;
+  line-height: 1.1;
+}
+
+@media screen and (max-width: 991px) {
+  .heading-style-italiclg {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .heading-style-italiclg {
+    font-size: 2.5rem;
+  }
+}
+
+.heading-style-italicsm {
+  font-family: var(--font-saol), serif;
+  font-size: 4rem;
+  font-style: italic;
+  font-weight: 100;
+  line-height: 1;
+}
+
+@media screen and (max-width: 991px) {
+  .heading-style-italicsm {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .heading-style-italicsm {
+    font-size: 2.5rem;
+  }
+}
+
+.heading-style-h1-md {
+  font-family: var(--font-helno), sans-serif;
+  letter-spacing: -.2rem;
+  font-size: 10rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+@media screen and (max-width: 1440px) {
+  .heading-style-h1-md {
+    font-size: 8rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .heading-style-h1-md {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .heading-style-h1-md {
+    font-size: 4rem;
+    line-height: 1;
+  }
+}
+
+.heading-style-h1-lg {
+  font-family: var(--font-helno), sans-serif;
+  font-size: 32rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+@media screen and (max-width: 1440px) {
+  .heading-style-h1-lg {
+    font-size: 27rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .heading-style-h1-lg {
+    font-size: 20rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .heading-style-h1-lg {
+    font-size: 10rem;
+  }
+}
+
+.heading-style-h2 {
+  font-family: var(--font-helno), sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+@media screen and (max-width: 479px) {
+  .heading-style-h2 {
+    font-size: 4rem;
+  }
+}
+
+.heading-style-h5 {
+  font-family: var(--font-helno), sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.label-copy {
+  letter-spacing: .3rem;
+  font-family: var(--font-helno-reg), sans-serif;
+  font-size: .8rem;
+  font-weight: 400;
+}
+
+.letter {
+  display: inline-block;
+}
+
+.tricksword {
+  white-space: nowrap;
+  display: inline-block;
+}
+
+/* Custom Scrollbar hide helper */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Underline link drawing hover effects */
+.main-text_link {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.main-text_link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--midnight-blue);
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+
+.main-text_link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.main-text_link.is-light::after {
+  background-color: var(--blue-light);
+}
+
+.main-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.underline-hover {
+  position: relative;
+}
+
+.underline-hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.underline-hover:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

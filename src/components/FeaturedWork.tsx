@@ -1,4 +1,3 @@
-'use test';
 'use client';
 
 import { useState } from 'react';
@@ -14,8 +13,7 @@ export default function FeaturedWork() {
       tag: "SIGNAGE & MANUFACTURING",
       description: "On & off-page SEO restructuring took V Sign to 2nd place in search rankings in 5 months, with 75% of website visitors now arriving through search.",
       image: "/images/vsign.png",
-      // hoverGif: "https://cdn.prod.website-files.com/63e07929e9775354b962403e/66b06d3bd7ad68903c852148_vinesia-hover-opt.gif",
-      link: "#contact"
+      link: "/case-study/vsign"
     },
     {
       id: 2,
@@ -23,8 +21,7 @@ export default function FeaturedWork() {
       tag: "HEALTHCARE",
       description: "A full-funnel ad strategy across Google & Meta drove a 94% increase in customer leads and over 4,000 leads generated, while lowering ad costs by 53%.",
       image: "/images/Vderma.png",
-      // hoverGif: "https://cdn.prod.website-files.com/63e07929e9775354b962403e/66b06d3bd7ad68903c852148_vinesia-hover-opt.gif",
-      link: "#contact"
+      link: "/case-study/vderma"
     },
     {
       id: 3,
@@ -32,8 +29,7 @@ export default function FeaturedWork() {
       tag: "REAL ESTATE",
       description: "A 360-degree SEO & content approach grew indexed pages by 175% and earned the #1 search ranking among regional real estate competitors.",
       image: "/images/mega.png",
-      // hoverGif: "https://cdn.prod.website-files.com/63e07929e9775354b962403e/66b06d3bd7ad68903c852148_vinesia-hover-opt.gif",
-      link: "#contact"
+      link: "/case-study/mega-properties"
     },
     {
       id: 4,
@@ -41,8 +37,7 @@ export default function FeaturedWork() {
       tag: "MANUFACTURING & RETAIL",
       description: "A focused Google Ads push during peak season delivered a 209% increase in organic traffic and 49% more quote requests within the year.",
       image: "/images/rigved.png",
-      // hoverGif: "https://cdn.prod.website-files.com/63e07929e9775354b962403e/66b06d3bd7ad68903c852148_vinesia-hover-opt.gif",
-      link: "#contact"
+      link: "/case-study/rigved-lighting"
     }
   ];
 
@@ -95,24 +90,13 @@ export default function FeaturedWork() {
               {/* Card thumbnail container */}
               <a
                 href={proj.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative block w-full aspect-[4/3] rounded-xl overflow-hidden shadow-md group"
+                className="relative block w-full aspect-[4/3] rounded-xl overflow-hidden shadow-md group cursor-pointer"
               >
                 {/* Static base image */}
                 <img
                   src={proj.image}
                   alt={proj.title}
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out"
-                />
-
-                {/* Hover GIF overlay */}
-                <img
-                  // src={proj.hoverGif}
-                  // alt={`${proj.title} animation`}
-                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 pointer-events-none 
-                    // hoveredCard === proj.id ? 'opacity-100' : 'opacity-0'
-                  `}
                 />
 
                 {/* Dark reveal gradient */}

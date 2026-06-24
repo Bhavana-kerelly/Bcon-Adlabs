@@ -49,11 +49,11 @@ export default function Testimonials() {
         <div className="lg:col-span-8 flex flex-col gap-12">
           
           {/* Video testimonial placeholder — add a client video embed here if available */}
-          <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-md bg-midnight-blue flex items-center justify-center">
+          {/* <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-md bg-midnight-blue flex items-center justify-center">
             <p className="text-beige/50 text-sm uppercase tracking-wide label-copy">
               Client video testimonial — add embed here
             </p>
-          </div>
+          </div> */}
 
           {/* Testimonial Quote list */}
           <div className="flex flex-col gap-8">

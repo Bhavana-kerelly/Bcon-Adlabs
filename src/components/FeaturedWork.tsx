@@ -120,6 +120,16 @@ export default function FeaturedWork() {
             </div>
           ))}
         </div>
+
+        {/* View All Case Studies Button */}
+        <div className="flex justify-center mt-16 md:mt-24">
+          <a
+            href="/blogs"
+            className="inline-block px-8 py-3.5 bg-hotred text-white font-bold rounded-lg hover:bg-hotred/90 transition-all duration-300 shadow-md hover:shadow-lg"
+          >
+            View All Case Studies →
+          </a>
+        </div>
       </div>
     </section>
   );
